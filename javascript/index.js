@@ -92,7 +92,7 @@ for(let i =0;i<=10;i++){
 }while(entrada != "ESC") */
 
 
-let entrada = prompt("Ingresar un nombre");
+/* let entrada = prompt("Ingresar un nombre");
 //Repetimos hasta que se ingresa "ESC"
 while(entrada != "ESC" ){
    switch (entrada) {
@@ -107,4 +107,53 @@ while(entrada != "ESC" ){
            break;
    }
    entrada = prompt("Ingresar un nombre");
+} */
+
+/* function solicitarNombre(){
+    let nombreIngresado   = prompt("Ingresar nombre")
+    alert("El nombre ingresado es " + nombreIngresado)
+} 
+solicitarNombre();
+solicitarNombre();
+solicitarNombre();
+
+ */
+/* function sumarDosNumeros(){
+    let var1 = parseInt(prompt("Ingresa un numero flaco: "));
+    let var2 = parseInt(prompt("Ingresa un numero flaco: "));
+    let resutlado = var1 + var2;
+
+    return resutlado;
+}
+
+console.log("El resultado es: "+ sumarDosNumeros()); */
+
+/* let var1 = parseInt(prompt("Ingresa un numero flaco: "));
+let var2 = parseInt(prompt("Ingresa un numero flaco: "));
+sumarDosNumeros(var1,var2); */
+
+/* const suma  = (a, b) => { return a + b };
+console.log("El RESULTADO DE SUMAR 15Y20 ES: " + suma(15,20)); */
+
+
+const primerNumero =parseInt(prompt("Escribir un numero: "));
+const segundorNumero =parseInt(prompt("Escribir un numero: "));
+const operacion = prompt("Opereacion: ");
+
+switch (operacion) {
+    case "suma":
+        console.log(primerNumero + segundorNumero);
+        break;
+    case "resta":
+        console.log(primerNumero - segundorNumero);
+        break;
+    case "dividir":
+        console.log(primerNumero / segundorNumero);
+        break;
+    case "multiplicar":
+        console.log(primerNumero * segundorNumero);
+        break;
+    default:
+        console.log("Ingreso algo mal.");
+        break;
 }
