@@ -296,7 +296,7 @@ console.log(g51);
 g52.describir();
  */
 
-class Anillo{
+/* class Anillo{
     constructor(modelo,precio,tamaño,color){
         this.modelo = modelo;
         this.precio = precio;
@@ -310,4 +310,88 @@ class Anillo{
 
 
 const Anillo1 =new Anillo("dragon",745,"chico","azul fuego");
-const Anillo2 =new Anillo("lagarto",123,"grande","amarillo patito");
+const Anillo2 =new Anillo("lagarto",123,"grande","amarillo patito"); */
+
+
+// CLASE 6 ARRAY
+
+/* const listaBool = [true,false,true];
+const listaChart = ["hola","chau","pepega"];
+const listaCosas = [123,"palabras",true,13.4,[]];
+
+console.log(listaBool);
+ console.log(listaChart.join(" chau "));
+console.log(listaChart); 
+console.log(listaCosas);
+console.log("Ahora muestro el tercer lugar " + listaCosas[2]);
+
+console.log("Separo las weas.");
+listaChart.push(213);
+
+for(let i=0;i<listaChart.length;i++){
+    console.log(listaChart[i]);
+}
+//ver mi carpeta para los splice y esas cosas.
+
+const A3 = listaChart.concat(listaCosas);
+const A4 = A3.slice(2,5);
+
+console.log(A3);
+console.log(A4); */
+
+/* const A1 =[];
+let CantidadArray = prompt("Ingresar cantidad de nombres a ingresar");
+
+for (let i = 0; i < CantidadArray; i++) {
+    A1[i] = prompt("Nombre: ");
+    
+}
+console.log(A1);
+
+function eliminarNombre(nombre){
+    const indice =A1.indexOf(nombre);
+    if(indice != -1){
+    A1.splice(indice,1);
+    console.log("Se elimino "+nombre+" del array");
+    }
+    else{
+        console.log("No puedo eliminar nada si no esta el nombre ");
+    }
+}
+eliminarNombre("FELIPE");
+console.log(A1);
+ */
+/* const objeto1 = { id: 1, producto: "Arroz" };
+const array   = [objeto1, { id: 2, producto: "Fideo" }];
+array.push({ id: 3, producto: "Pan" ,estado:{descripcion: "En stock"}});
+ console.log(array); 
+
+for(const elemento of array){
+    console.log(elemento);
+} */
+
+
+class Producto{
+    constructor(nombre,stock,precio){
+        this.nombre=nombre;
+        this.stock =stock;
+        this.precio=precio;
+    }
+}
+
+const ListaDeProductos=[];
+
+let opcion =prompt("desea ingresar un producto? Si para continuar ESC para salir: ");
+
+while(opcion != "ESC"){
+    const nombre = prompt("Ingrese nombre: ");
+    const stock = parseFloat(prompt("Ingrse stock: "));
+    const precio = parseInt(prompt("Ingrese precio"));
+
+    const producto = new Producto(nombre, stock, precio);
+    ListaDeProductos.push(producto);
+
+    opcion = prompt(" ESC para salir ");
+}
+
+console.log(ListaDeProductos);
