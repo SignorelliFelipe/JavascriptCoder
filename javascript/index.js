@@ -1,4 +1,4 @@
-/* CLASE 1
+/*          CLASE 1
 
 let nombreAsignado = prompt("Hola, ingrese su Nombre por favor");
 
@@ -13,7 +13,7 @@ let x1 =24, x2=55;
 let resultado1 = x1+x2;
 
 console.log(resultado1); */
-//clase 2
+//          clase 2
 
 /* let nombreUsuario1 = prompt("Ingrese su nombre por favor: ");
 
@@ -47,7 +47,7 @@ else{
 }
  */
 
-//CLASE 3 ITERADORES
+//          CLASE 3 ITERADORES
 /* let NumeroUsuraio1 = parseInt(prompt("Ingresa un numero flaco: "));
 
 for(let i =0;i<=10;i++){
@@ -204,7 +204,7 @@ function SumarCompra(){
 
 alert("El total a pagar es de: $"+SumarCompra()+" Pesos"); */
 
-//CLASE 5 OBJETOS
+//          CLASE 5 OBJETOS
 
 
 /* const persona = {
@@ -313,7 +313,7 @@ const Anillo1 =new Anillo("dragon",745,"chico","azul fuego");
 const Anillo2 =new Anillo("lagarto",123,"grande","amarillo patito"); */
 
 
-// CLASE 6 ARRAY
+//          CLASE 6 ARRAY
 
 /* const listaBool = [true,false,true];
 const listaChart = ["hola","chau","pepega"];
@@ -371,7 +371,7 @@ for(const elemento of array){
 } */
 
 
-class Producto{
+/* class Producto{
     constructor(nombre,stock,precio){
         this.nombre=nombre;
         this.stock =stock;
@@ -394,4 +394,126 @@ while(opcion != "ESC"){
     opcion = prompt(" ESC para salir ");
 }
 
-console.log(ListaDeProductos);
+console.log(ListaDeProductos); */
+
+//          CLASE 7
+
+/*  function mayorQue(n) {
+    return (m) => m > n
+}
+
+let mayorQueDiez = mayorQue(10)
+
+console.log( mayorQueDiez(12) )  //  true
+console.log( mayorQueDiez(8) )  //  false
+
+function asignarOperacion(op) {
+    if (op == "sumar") {
+        return (a, b) => a + b
+    } else if (op == "restar") {
+        return (a, b) => a - b
+    }
+}
+
+let suma = asignarOperacion("sumar")
+let resta = asignarOperacion("restar")
+
+console.log( suma(4, 6) )  //  10
+console.log( resta(5, 3) )  //  2 
+ */
+/* function porCadaUno(arr, fn) { //fn = Funcion 
+    for (const el of arr) {
+        fn(el)
+    }
+}
+const numeros= [17, 72, 673, 234]
+
+porCadaUno(numeros, console.log)
+
+
+const duplicado = []
+
+porCadaUno(numeros, (el)=> {
+    duplicado.push(el * 2)
+})
+
+console.log(duplicado) // [2, 4, 6, 8]
+console.log(numeros) // [2, 4, 6, 8] */
+
+/* const numeros = [1, 2, 3, 4, 5, 6]
+
+numeros.forEach( (num)=> {
+    console.log(num)
+} )
+ */
+const cursos = [
+    {nombre: 'Javascript', precio: 15000},
+    {nombre: 'ReactJS', precio: 22000},
+]
+
+const resultado = cursos.find((el) => el.nombre === "ReactJS")
+const resultado2 = cursos.find((el) => el.nombre === "DW")
+
+console.log(resultado) // {nombre: 'ReactJS', precio: 22000}
+console.log(resultado2) // undefined
+
+
+
+
+
+
+//       CLASE 8  DOM
+
+/* console.dir(document);
+console.log(document); */
+/* console.log(document.getElementById("HOLA"));
+console.log(document.getElementsByClassName("hola"));
+console.log(document.getElementsByTagName("h1"));
+ */
+
+/* let paises = document.getElementsByClassName("paises");
+console.log(paises[0].innerHTML);
+console.log(paises[1].innerHTML);
+console.log(paises[2].innerHTML);
+
+for(const el of paises){
+    el.innerHTML ="Argentina";
+} */
+
+/* const div =document.getElementById("app");
+div.innerHTML = `
+        <h3>Patata</h3>
+            <ul>
+                <li class="paises">AGUANTE BOCA</li>
+                <li class="paises">ARGENITNA CAMPEON</li>
+                <li class="paises">URUGUAY KEKW</li>
+            </ul>`;
+div.className="fondo-bonito";
+
+
+let parrafo = document.createElement("p");
+
+parrafo.innerHTML = "<h2> !Hola grupo!</h2>";
+
+document.body.append(parrafo);
+
+const primerInput = document.getElementById("nombre");
+const segundoInput = document.getElementById("edad");
+
+segundoInput.value =16;
+primerInput.placeholder ="ingresa algo flaco";
+ */
+
+/* const array = ["HOMERO","MARGE", "BART", "LISA","MAGGIE"];
+
+const padre =document.getElementById("app");
+
+const ol =document.createElement("ol");
+
+
+for(const el of array){  
+     const li = document.createElement("li");
+    li.innerHTML=`<h5>${el}</h5>`;
+    ol.append(li);
+}
+padre.append(ol); */
