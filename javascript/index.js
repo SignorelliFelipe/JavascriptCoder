@@ -446,7 +446,7 @@ numeros.forEach( (num)=> {
     console.log(num)
 } )
  */
-const cursos = [
+/* const cursos = [
     {nombre: 'Javascript', precio: 15000},
     {nombre: 'ReactJS', precio: 22000},
 ]
@@ -455,10 +455,103 @@ const resultado = cursos.find((el) => el.nombre === "ReactJS")
 const resultado2 = cursos.find((el) => el.nombre === "DW")
 
 console.log(resultado) // {nombre: 'ReactJS', precio: 22000}
-console.log(resultado2) // undefined
+console.log(resultado2) // undefined */
+
+
+/* const cursos = [
+    {nombre: 'Javascript', precio: 15000},
+    {nombre: 'ReactJS', precio: 22000},
+    {nombre: 'AngularJS', precio: 22000},
+    {nombre: 'Desarrollo Web', precio: 16000},
+]
+
+const nombres = cursos.map((el) => el.nombre );
+console.log(nombres);
+const actualizado = cursos.map((el) => {
+    //Aca puedo meter un if 
+    return {
+        nombre: el.nombre,
+        precio: el.precio * 1.25
+    }
+})
+
+console.log(actualizado) */
+
+/* const productos = [{ id: 1,  producto: "Arroz", precio: 125 },
+                  {  id: 2,  producto: "Fideo", precio: 70 },
+                  {  id: 3,  producto: "Pan"  , precio: 50},
+                  {  id: 4,  producto: "Flan" , precio: 100}]
+
+const buscado = productos.find(producto => producto.id === 3)
+console.log(buscado) //{id: 3, producto: "Pan", precio: 50}
+
+const existe = productos.some(producto => producto.nombre === "Harina");
+console.log(existe ) // false
+
+const baratos = productos.filter(producto => producto.precio < 100)
+console.log(baratos)
+// [{id: 2,producto:"Fideo",precio:70},{id:3,producto:"Pan",precio: 50}]
+
+const listaNombres = productos.map(producto => producto.nombre)
+console.log(listaNombres);
+//[“Arroz”, “Fideo”, “Pan”, “Flan”]
+ */
+
+/* console.log(Math.E);
+console.log( Math.max(55, 13, 0, -25, 93, 4) ) // 93
+console.log( Math.min(55, 13, 0, -25, 93, 4) ) // -25
+console.log( Math.random() * 10);
+console.log( Math.random() * 30 + 20 );
+
+
+console.log(( Math.random() * 10).toFixed(2));
+console.log(parseInt( Math.random() * 10));
+console.log( Math.round(Math.random() * 10)); */
+/* const numeros = [ 40, 1, 5, 200 ];
+numeros.sort((a, b) => a - b);  // [ 1, 5, 40, 200 ]
+numeros.sort((a, b) => b - a);  // [ 200, 40, 5, 1 ] */
+
+/* const resultado = cursos.filter((el) => el.nombre.includes('JS'))
+const resultado2 = cursos.filter((el) => el.precio < 14000)
+
+console.log(resultado) */
+/* [
+    {nombre: 'ReactJS', precio: 22000},
+    {nombre: 'Angular', precio: 22000}
+] */
+
+/* console.log(resultado2) // []
+
+console.log( cursos.some((el) => el.nombre == "Desarrollo Web")) 
+// true
+console.log( cursos.some((el) => el.nombre == "VueJS")) 
+// false */
 
 
 
+/* console.log( new Date() );
+console.log( new Date(2000,1,15) );
+ */
+const casiNavidad = new Date("December 25, 2021 23:59:59")
+console.log(casiNavidad)
+console.log(casiNavidad.getHours());
+console.log(casiNavidad.getMinutes());
+console.log(casiNavidad.getMonth()+1);
+console.log();
+
+setTimeout(()=>{
+    console.log("Hola tarde 5 segs en ejecutarme");
+},5000);
+
+const inicio = new Date()
+
+for (let i = 0; i < 1000; i++) {
+    console.log("haciendo tiempo")
+}
+
+const final = new Date()
+
+console.log("El proceso tardó: " + (final - inicio) + " milisegundos")
 
 
 
