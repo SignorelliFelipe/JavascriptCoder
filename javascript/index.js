@@ -12,14 +12,14 @@ class Producto{
         this.precio = precio;
        
     }
-}
+};
 class Cliente{
     constructor(id,nombre,apellido){
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
     }
-}
+};
 
 //tres arrays donde voy a juntar todo
 const Productos = [];
@@ -43,7 +43,7 @@ function mostrarArray(array){
     array.forEach((el)=>{
         console.log(el);
     });
-}
+};
 
 
 //me presento y doy contexto
@@ -138,8 +138,9 @@ while(opcion !== 7){
                                   7- Salir  
       `)
       );
+      
     if (opcion == 7) {
         alert("Muchas gracias por su tiempo. Vuelva pronto!");
         console.log("Muchas gracias por su tiempo. Vuelva pronto!");
     }
-}
+};
