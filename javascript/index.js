@@ -586,7 +586,7 @@ for (const pais of paises) {
     pais.innerText = "Argentina";
 }; */
 
- const div =document.getElementById("app")
+/*  const div =document.getElementById("app") */
 /* div.innerHTML += `<p id = "parrafo1" >Hola Mundo (esto es un div con una p)</p>
 
             <ul class="lista">
@@ -595,7 +595,7 @@ for (const pais of paises) {
             <li class="paises">KJJJ 4 COPAS</li>
 </ul>`;
  */
-div.className ="fondo-bonito";
+/* div.className ="fondo-bonito"; */
 
 /*
 const h3 = document.createElement("h3");
@@ -645,9 +645,9 @@ for (const el of productos) {
   div.appendChild(contenedor);
 } */
 
-const padre = document.querySelector(".contenedor"); // eL ALL trae todos
+/* const padre = document.querySelector(".contenedor"); // eL ALL trae todos
 console.log(padre);
-
+ */
                         // SEGUNDA ENTREGA 
 //Otro acumulador
 /* let total=0;
@@ -795,3 +795,195 @@ while(opcion !== 7){
         console.log("Muchas gracias por su tiempo. Vuelva pronto!");
     }
 }; */
+//                  CLASE 9
+
+/*  const boton1 = document.getElementById("boton1");
+console.log(boton1); 
+
+
+
+const botones = document.querySelectorAll(".botones");
+botones.forEach((el)=>{
+    el.onclick = () =>{
+        console.log("Algo que sale de la clase de botones");
+    };
+});
+console.log(botones);
+/* boton.onclick = () =>{
+    console.log("Soy un boton maestro.")
+}; 
+// EVENTOS DE MOUSE
+boton1.addEventListener("mousemove",()=>{
+    console.log("mouse mov");
+}); */
+/* const boton3 = document.getElementById("boton3");
+console.log(boton3); */
+/* boton3.addEventListener("keyup",()=>{
+    console.log("keyup");
+});
+boton3.addEventListener("keydown",()=>{
+    console.log("keydown");
+}); */
+/* boton3.addEventListener("change",(e)=>{
+    console.log("soy un onchange");
+})
+boton3.addEventListener("change",(e)=>{
+    console.log(e);
+}) */
+
+/* const formulario ={
+    nombre: "",
+    apellido:"",
+};
+ */
+/* boton3.addEventListener("change",(e)=>{
+     console.log(e.target.value); 
+    formulario.nombre=e.target.value;
+    console.log(formulario);
+});
+*/
+
+/* console.log(formulario); */
+
+/* boton3.addEventListener("input",(e)=>{
+    formulario.nombre = e.target.value;
+    console.log(formulario);
+}); */
+
+/* boton3.addEventListener("focus",(e)=>{
+    console.log("focus del input");
+}); */
+/* let miFormulario      = document.getElementById("formulario");
+miFormulario.addEventListener("submit", validarFormulario);
+
+function validarFormulario(e){ //e hace referencia a event
+    e.preventDefault();// cancela el F5 
+    console.log("Formulario Enviado");    
+    console.log(e.target[1].value);    
+}*/
+
+//          CLASE 10
+
+/* console.log("Clase 10");
+
+localStorage.setItem("token",'¡Hola Coder!');
+localStorage.setItem("key","valor");
+localStorage.setItem("saludo",true);
+
+/* const saludoDeStorage = localStorage.getItem("saludo");
+console.log(saludoDeStorage);
+console.log(true);
+
+sessionStorage.setItem("Hola", "saludos");
+
+const saludoDeSession = sessionStorage.getItem("Hola");
+console.log(saludoDeSession);
+
+sessionStorage.clear(); 
+localStorage.clear(); 
+
+// recorrer local storege
+ for (let i = 0; i < localStorage.length; i++) {
+    let clave = localStorage.key(i);
+    console.log("Clave: "+ clave);
+    console.log("Valor: "+ localStorage.getItem(clave));
+}
+ 
+
+console.log("------------------");
+
+localStorage.removeItem("key");
+for (let i = 0; i < localStorage.length; i++) {
+    let clave = localStorage.key(i);
+    console.log("Clave: "+ clave);
+    console.log("Valor: "+ localStorage.getItem(clave));
+}
+  */
+
+/* sessionStorage.clear(); 
+localStorage.clear(); 
+ */
+/* const persona = {nombre:"FELIPE", apellido:"Signorelli"};
+localStorage.setItem("persona",JSON.stringify(persona) );
+const ObjertoPersona = JSON.parse(localStorage.getItem("persona"));
+console.log(ObjertoPersona.nombre);
+console.log(ObjertoPersona.apellido);
+console.log(ObjertoPersona);
+ */
+
+/* const boolean = true;
+const producto1 = { id: 2, producto: "Arroz" };
+const enJSON    = JSON.stringify(producto1);
+
+console.log(typeof boolean);
+console.log(enJSON); // {"id":2,"producto":"Arroz"}
+console.log(typeof producto1); // object
+console.log(typeof enJSON);    // string
+
+localStorage.setItem("producto1", enJSON); */
+// Se guarda {"id":2,"producto":"Arroz"}
+
+/*  const productos = [{ id: 1,  producto: "Arroz", precio: 125 },
+                  {  id: 2,  producto: "Fideo", precio: 70 },
+                  {  id: 3,  producto: "Pan"  , precio: 50},
+                  {  id: 4,  producto: "Flan" , precio: 100}];
+
+const guardarLocal = (clave, valor) => { localStorage.setItem(clave, valor) };
+//Almacenar producto por producto
+for (const producto of productos) {
+    guardarLocal(producto.id, JSON.stringify(producto));
+}
+console.log("-----");
+// o almacenar array completo
+guardarLocal("listaProductos", JSON.stringify(productos));
+
+const MiLista = JSON.parse(localStorage.getItem("listaProductos"));
+ 
+console.log(MiLista); */
+
+/* const enJSON    = '{"id":2,"producto":"Arroz"}';
+const producto1 = JSON.parse(enJSON);
+
+console.log(typeof enJSON);     // string
+console.log(typeof producto1);  // object
+console.log(producto1.producto); // Arroz
+
+localStorage.setItem("producto1",JSON.stringify(producto1));
+// O TAMBIEN 
+//localStorage.setItem("producto1",enJSON);
+const producto2 = JSON.parse(localStorage.getItem("producto1"));
+console.log(producto2.id);  // 2    */
+
+/* class Producto {
+    constructor(obj) {
+        this.nombre  = obj.producto.toUpperCase();
+        this.precio  = parseFloat(obj.precio);
+    }
+    sumaIva() {
+        this.precio = this.precio * 1.21;
+    }
+}
+//Obtenemos el listado de productos almacenado
+const almacenados = JSON.parse(localStorage.getItem("listaProductos"));
+const productos = [];
+//Iteramos almacenados con for...of para transformar todos sus objetos a tipo producto.
+for (const objeto of almacenados){
+    productos.push(new Producto(objeto))
+};
+//Ahora tenemos objetos productos y podemos usar sus métodos
+for (const producto of productos){
+    producto.sumaIva();
+} */
+//localStorage.clear();
+
+/* const persona ={nombre:"Felipe",apellido:"Signorelli"};
+
+localStorage.setItem("persona",JSON.stringify(persona));
+ 
+//localStorage.getItem("persona");
+
+const recuperamosPersona =JSON.parse(localStorage.getItem("persona"));
+
+console.log(recuperamosPersona);
+console.log(recuperamosPersona.nombre);
+console.log(recuperamosPersona.apellido); */
