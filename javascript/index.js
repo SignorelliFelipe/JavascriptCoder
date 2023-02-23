@@ -987,3 +987,11 @@ const recuperamosPersona =JSON.parse(localStorage.getItem("persona"));
 console.log(recuperamosPersona);
 console.log(recuperamosPersona.nombre);
 console.log(recuperamosPersona.apellido); */
+
+//      CLASE 11
+/* console.log("Hola");
+
+import {Saludo, Nadar} from "./funciones.js";
+
+Saludo();
+Nadar(); */
