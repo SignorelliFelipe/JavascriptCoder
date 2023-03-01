@@ -4,7 +4,7 @@ let total=0;
 let idsProducos= 0;
 let idsPerersonas =0;
 //Importo las clases
-import { Producto, Cliente } from "./Clases.js";
+import { Producto, Cliente } from "./clases.js";
 
 //Importo funciones
 import { MostrarArray, MostrarTotal } from "./funciones.js";
@@ -63,6 +63,8 @@ botonProductos.addEventListener("click",()=>{
         
     });
         const botonesCarrito = document.querySelectorAll(".AgregarCarrito");
+        // ESTO ES NUEVO Y NO SE SI LO ROMPIA PERO POR LAS DUDAS 28/2/23
+        const CarritoCompras=JSON.parse(localStorage.getItem("carritoStorage"))  || [];
         botonesCarrito.forEach((boton, index) => {
                 boton.addEventListener("click", () => {
                     CarritoCompras.push(Productos[index]);
@@ -124,6 +126,7 @@ botonCarrito.addEventListener("click",()=>{
     })
     
 });
+
 
 botonClientes.addEventListener("click",()=>{
     container.innerHTML="";
