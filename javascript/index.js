@@ -15,7 +15,7 @@ const Productos = [];
 const Clientes = JSON.parse(localStorage.getItem("ClientesStorage")) || [];
 //checkeo si tengo algo  esto lo vuelvo a utilizar mas abajo tambien
 const CarritoCompras=JSON.parse(localStorage.getItem("carritoStorage"))  || [];
-/* const ClientesStorage =JSON.parse(localStorage.getItem("ClientesStorage")) || []; */
+
 
 
 //Productos randoms para tener algo que vender
@@ -26,14 +26,11 @@ Productos.push(new Producto(idsProducos++,"Collar N","Negro",8600));
 Productos.push(new Producto(idsProducos++,"Buzo","Negro",3500));
 Productos.push(new Producto(idsProducos++,"Remera","Blanca",1245));
 
-//Un  nombres de Clientes random para que supuestamnete ya exista mas gente
-/* Clientes.push(new Cliente(idsPerersonas++,"Pepe","Argento")); */
-
 //Boton en el nav
 
 const ApiPrueba =document.querySelector("#ApiPrueba")
 
-//Botones a usar
+//Botones para usar
 const botonProductos = document.querySelector("#botonProductos");
 const botonCarrito =document.querySelector("#botonCarrito");
 const botonClientes =document.querySelector("#botonClientes");
@@ -51,8 +48,6 @@ const container = document.querySelector(".container");
 
 
 // EVENTOS
-
-
 
 
 botonProductos.addEventListener("click",()=>{
@@ -262,10 +257,10 @@ botonEnBlanco.addEventListener("click",()=>{
     }).showToast();
 })
 
-//nav bar
+//nav bar para la Api
 
 ApiPrueba.addEventListener("click",()=>{
-   paraBorrar.innerHTML="";
+        paraBorrar.innerHTML=`<h2> Futuros productos que vamos a incorporar dentro de poco! </h2>`
 
    Toastify({
     text: "Acabamos de limpiar todo para que se vea mejor",
@@ -275,4 +270,19 @@ ApiPrueba.addEventListener("click",()=>{
     }
   }).showToast();
 
+   fetch('https://fakestoreapi.com/products')
+        .then((data)=>{
+            return data.json();
+        })
+        .then((res)=>{
+            res.forEach((el)=>{
+                paraBorrar.innerHTML+=`  
+                        <img class="ApiImagenes" src="${el.image}" >
+                `;
+            })
+        })
+        .catch((error)=>{
+            console.log(error);
+        })
+ 
 })
