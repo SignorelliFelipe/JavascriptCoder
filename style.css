@@ -1,6 +1,97 @@
 
 /* . -> clase # -> id h1-> etiqueta */
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+}
 
-.fondo-bonito{
-    background-color: burlywood;
+
+header{
+    display: flex;
+    min-height: 90px;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    border-color: gray;
+    border-width: 4px;
+    border-style: solid;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+ 
+}
+.logo img{
+    height: 90px;
+}
+
+.nav-link{
+    margin: 8px; 
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 1rem 1.5rem;
+    transition: all 0.3s linear;
+    border-radius: 5rem;
+}
+.nav-link:hover{
+    color: violet;
+    
+}
+
+
+
+main{
+    background:#1aa3b2;
+    min-height: 40rem;
+    padding: 2rem 3rem;
+    max-width: 90rem;
+    margin: auto;
+    font-weight: 600 ;
+}
+
+.footer{
+    background:white;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-color: gray;
+    border-width: 4px;
+    border-style: solid;
+}
+
+.foter-container{
+    align-items: center;
+    text-decoration: none;
+}
+
+.footer li{
+    list-style: none;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    text-decoration: none;
+    
+}
+.footer a{
+    text-decoration: none;
+    color: #333;
+    font-size: 1.17em;
+    font-weight: bold;
+    padding: 1rem 1.5rem;
+    transition: all 0.3s linear;
+    border-radius: 5rem;
+    
+}
+.footer a:hover{
+    color: violet;
+}
+
+@media (max-width:700px){
+    header{
+        flex-direction: column;
+    }
 }
