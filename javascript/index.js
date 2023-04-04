@@ -1,5 +1,4 @@
-//Otro acumulador
-/* let total=0; */
+
 //Dos contadores para cada ID por separado
 let idsProducos= 0;
 let idsPerersonas =0;
@@ -7,7 +6,7 @@ let idsPerersonas =0;
 import { Producto, Cliente } from "./clases.js";
 
 //Importo funciones
-import {/*  MostrarArray, */ MostrarTotal } from "./funciones.js";
+import {MostrarTotal } from "./funciones.js";
 
 
 //tres arrays donde voy a juntar todo

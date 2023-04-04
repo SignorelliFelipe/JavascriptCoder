@@ -1,10 +1,4 @@
 
-/* export const MostrarArray =(array)=>{
-    array.forEach((el)=>{
-        console.log(el);
-    });
-}
- */
  export const MostrarTotal =(Array,container)=>{
     console.log("");
             let total=0;
