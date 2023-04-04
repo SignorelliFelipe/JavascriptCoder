@@ -65,6 +65,10 @@ main{
 }
 
 
+.ProductosIMG{
+    height:150px;
+}
+
 .ApiImagenes{
     height: 250px;
 }

@@ -1,9 +1,10 @@
 export class Producto{
-    constructor(id,nombre,color,precio){
+    constructor(id,nombre,color,precio,imgSRC){
         this.id = id;
         this.nombre = nombre;
         this.color = color;
         this.precio = precio;
+        this.imgSRC = imgSRC;
        
     }
 };
